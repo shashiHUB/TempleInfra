@@ -1,0 +1,20 @@
+trigger: none
+
+variables:
+- template: variables.yml
+
+pool:
+  name: $(variables.poolName) 
+  # vmImage: $(variables.vmImage) 
+
+stages:
+- template: ../../../templates/tmpt-terra-backend.yml
+  parameters:
+    poolName: ${{ variables.poolName }}
+    environment: ${{ variables.environment }}
+    backendServiceArm: ${{ variables.backendServiceArm }}
+    environmentDisplayName: ${{ variables.environmentDisplayName }}
+    backendAzureRmResourceGroupName: ${{ variables.backendAzureRmResourceGroupName }}
+    backendAzureRmStorageAccountName: ${{ variables.backendAzureRmStorageAccountName }}
+    backendAzureRmContainerName: ${{ variables.backendAzureRmContainerName }}
+    location: ${{ variables.location }}
