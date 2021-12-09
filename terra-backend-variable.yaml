@@ -1,0 +1,10 @@
+variables:
+  poolName: 'poc-terrform-agent-pool'
+  environment: 'pocTerraformBackendfState'
+  backendServiceArm: 'service-conn-subscription' # SPN
+  environmentDisplayName: 'Create TF Backend'
+  backendAzureRmResourceGroupName: 'poc-resourcegroup-tfstate-eastus'
+  backendAzureRmStorageAccountName: 'tfstateeastus'
+  backendAzureRmContainerName: 'tfstate'
+  location: 'eastus'
+  #vmImage: 'ubuntu-latest'
